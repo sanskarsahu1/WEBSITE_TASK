@@ -24,19 +24,30 @@
     padding: 20px;
 }
 
-.search-bar2{
-    background-color: transparent;
-    z-index: 2; 
+
+
+.searhBar{
+    background-color: #f0f0f0;
 }
 
-.search-bar2 input {
+.search-box{
+    background-color: (255, 255, 255, 0.5);
+    outline: none;
+    color: #333;
+   
+}
+.search-box:focus{
+    border-color: rgba(0, 0, 0, 0.5); /* Darker border on focus */
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+/* .searchBarr input {
     padding: 5px;
     border: none;
     border-radius: 1px;
-    background-color: transparent;
-    z-index: 2; 
+    border-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(255, 255, 255, 0.8); 
    
-}
+} */
 
 .hamburger {
     display: flex;
@@ -115,15 +126,29 @@
 
 }
 
+/* Styling First Page Model Image */
 .first-img{
     width: 100%;
     height: 115vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
-/* 
-.first-text{
-    position: a;
 
-} */
+
+@media screen and (max-width: 1024px) {
+    .image-container {
+      padding: 10px;
+    }
+  }
+  
+  /* Adjust layout for mobile phones */
+  @media screen and (max-width: 768px) {
+    .image-container {
+      padding: 5px;
+    }
+  }
+
 
 .container{
     display: flex;
@@ -158,11 +183,7 @@ p{
     /* size: 50%; */
 }
 
-.sml2{
-    height: 450px;
-    width: 300px;
-    /* size: 50%; */
-}
+
 
 /* 2nd page box css */
 .secondPage{
@@ -210,22 +231,45 @@ p{
     display: flex;
 }
 
+/* 5th Page old Code */
+
+/* .sml2{
+    height: 450px;
+    width: 300px;
+    /* size: 50%; */
+/* } */  
+
+
+/* 5th Page new responsive code */
+.sml2 {
+    height: 450px; /* Allow images to adjust height based on their width */
+    width: 300px; /* Ensure images take full width of their container */
+    max-width: 100%; /* Limit maximum width to prevent overflow */
+    display: block; /* Ensure images behave as block elements */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+
+
+
+
+/* Old styling for 6th Page */
+/* 
 .btn{
     background-color: #f6acac;
     border: 0px;
 }
 
 .text-container{
-    /* justify-content: center;
-    align-items: center; */
+    
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
 
 }
 
+
 .box-div-container{
-       /* display: flex; */
        background-color: #f3d0d0;
        padding-top: 20px;
        padding-bottom: 0px;
@@ -259,12 +303,107 @@ p{
     height: auto;
     display: block;
     margin-bottom: 10px;
+}  */
+
+
+/* New Responsive styling for 6th Page */
+
+
+.box-div-container {
+    background-color: #f3d0d0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+.box-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3d0d0;
+    padding: 20px 10px;
+    overflow: hidden; /* Prevents horizontal scroll on small screens */
+}
+
+.box {
+    width: 30%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: white;
+    margin-bottom: 20px; /* Space between boxes */
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.middle {
+    background-color: white;
+}
+
+.text-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.text-container h2 {
+    margin: 0;
+}
+
+.btn {  
+    background-color: #d19898;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.btn-special{
+    background-color:  #d19898;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    max-width: 150px;     /* adding to see the output */
+
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .box-div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* Don't know which styling is this */
 
 .sevnth-Wrapper{
     /* display: flex; */
 }
 
+.pad{
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.dis_lef{
+    justify-content: left;
+    text-align: left;
+}
 .seventhSubDiv{
     display: flex;
     justify-content:space-around;
@@ -272,18 +411,27 @@ p{
     text-align: center;
     margin-left: 60px;
     margin-right: 20px;
+    margin-bottom: 60px;
 }
-
+.left-text{
+    margin-left: 20px;
+} 
 .last-img{
     height: 500px;
     width: 450px;
-    margin-right: 200px;
+    margin-right: 150px;
+    margin-left: 20px;
 }
 
 
 /* Last Page  */
 /* Contact Us last page form css */
 /* Styling for the background container */
+
+
+ /* 8th Page NEW RESPONSIVE STYLING */
+
+ 
 .background-container {
     background: url('./data/img15.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -291,6 +439,7 @@ p{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px; /* Added padding for better spacing */
 }
 
 .container2 {
@@ -301,9 +450,10 @@ p{
     max-width: 1000px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Added flex-wrap for responsive stacking */
 }
 
 .info-box,
@@ -316,19 +466,19 @@ p{
     background-color: #fee;
     border: 1px solid #fcc;
     border-radius: 10px;
-    text-align: left; /* Align text to the left */
-    height: 500px; /* Increased height */
+    text-align: left;
+    height: 500px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start;
 }
 
 .info-box h2 {
-    color: #f9c;
+    color: #f3d0d0;
 }
 
 .heading {
-    color: #f9c;
+    color: #f3d0d0;
     text-align: center;
 }
 
@@ -346,9 +496,9 @@ textarea {
     width: 100%;
     padding: 10px;
     border: none;
-    border-bottom: 2px solid #f9c;
+    border-bottom: 1px solid #b57a7a;
     border-radius: 5px;
-    background-color: #fff; /* Removed pink background */
+    background-color: #fff;
 }
 
 input::placeholder,
@@ -357,22 +507,50 @@ textarea::placeholder {
 }
 
 button {
-    width: 50%; /* Decreased width */
+    width: 50%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #f9c;
+    background-color: #d79b9b;
     color: white;
     font-size: 16px;
     cursor: pointer;
     display: block;
-    margin: 0 auto; /* Centered the button */
+    margin: 0 auto;
 }
 
 button:hover {
     background-color: #d87;
 }
 
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .info-box,
+    .form-container {
+        width: 100%;
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .info-box {
+        height: auto; /* Adjust height for better fit on small screens */
+        margin-bottom: 20px; /* Add spacing between stacked items */
+    }
+
+    button {
+        width: 80%; /* Increase button width for smaller screens */
+    }
+}
+
+
+
+
+/* Footer Styling */
 footer {
     background-color: #333333;
     color: white;
@@ -399,26 +577,6 @@ footer {
 
 .footer-content a:hover {
     text-decoration: underline;
-}
-
-
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px;
-    }   
-
-    .info-box,
-    .form-container {
-        width: 100%;
-    }
-
-    .info-box {
-        height: auto; /* Adjust height for responsiveness */
-        text-align: center;
-        justify-content: center; /* Center content in mobile view */
-    }
 }
 
 
